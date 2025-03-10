@@ -7,7 +7,8 @@ chrome.runtime.onInstalled.addListener(() => {
       { id: "playphrase", title: "Playphrase", url: "https://de.playphrase.me/#/search?language=de&q=%s" },
       { id: "verbformen", title: "Verbformen", url: "https://www.verbformen.com/conjugation/%s.htm" },
       { id: "linguee", title: "Linguee", url: "https://www.linguee.com/english-german/search?source=auto&query=%s" },
-      { id: "forvo", title: "Forvo", url: "https://forvo.com/word/%s/#it" }
+      { id: "forvo", title: "Forvo", url: "https://forvo.com/word/%s/#it" },
+      { id: "googleTranslate", title: "Google Translate", url: "https://translate.google.com/?sl=auto&tl=en&text=%s&op=translate" }
     ];
 
     // Create the parent menu item
@@ -38,7 +39,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     { id: "playphrase", title: "Playphrase", url: "https://de.playphrase.me/#/search?language=de&q=%s" },
     { id: "verbformen", title: "Verbformen", url: "https://www.verbformen.com/conjugation/%s.htm" },
     { id: "linguee", title: "Linguee", url: "https://www.linguee.com/english-german/search?source=auto&query=%s" },
-    { id: "forvo", title: "Forvo", url: "https://forvo.com/word/%s/#it" }
+    { id: "forvo", title: "Forvo", url: "https://forvo.com/word/%s/#it" },
+    { id: "googleTranslate", title: "Google Translate", url: "https://translate.google.com/?sl=auto&tl=en&text=%s&op=translate" }
+  
   ];
   
   const service = services.find(s => s.id === info.menuItemId);
